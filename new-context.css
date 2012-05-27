@@ -1,0 +1,20 @@
+/* Ilia Streltsyn's method */
+.new-context {
+    display: table;
+}
+/* Important supplement */
+.new-context:after {
+    content: '. .';
+    display: block;
+    height: 0;
+    overflow: hidden;
+    word-spacing: 99in;
+
+    /* Workaround for Opera's bug with bottom margin */
+    font-size: 0.05em;
+    line-height: 0.05em;
+}
+
+/* IE */
+* html .new-context { zoom: 1; } /* IE6 */
+*:first-child+html .new-context { zoom: 1; } /* IE7 */
